@@ -1,49 +1,11 @@
+import type {
+  AddressUser,
+  DummyJsonResponse,
+  HairColors,
+  TransformedData,
+  User,
+} from '@/types/user';
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-// Types for the API response
-interface User {
-  id: number;
-  firstName: string;
-  lastName: string;
-  age: number;
-  gender: 'male' | 'female';
-  hair: {
-    color: string;
-  };
-  address: {
-    postalCode: string;
-  };
-  company: {
-    department: string;
-  };
-}
-
-interface DummyJsonResponse {
-  users: User[];
-  total: number;
-  skip: number;
-  limit: number;
-}
-
-interface HairColors {
-  [color: string]: number;
-}
-
-interface AddressUser {
-  [fullName: string]: string;
-}
-
-interface DepartmentData {
-  male: number;
-  female: number;
-  ageRange: string;
-  hair: HairColors;
-  addressUser: AddressUser;
-}
-
-interface TransformedData {
-  [department: string]: DepartmentData;
-}
 
 // Performance optimized data transformation
 function transformUserData(users: User[]): TransformedData {
