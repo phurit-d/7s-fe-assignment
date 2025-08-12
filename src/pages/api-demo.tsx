@@ -28,6 +28,10 @@ export default function ApiDemoPage() {
     setSkip(newSkip);
   };
 
+  const handleGoTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   if (loading) {
     return (
       <div className="flex min-h-screen items-center justify-center bg-gray-50">
@@ -190,6 +194,16 @@ export default function ApiDemoPage() {
             </div>
           </div>
         )}
+
+        <div className="mt-6 flex items-center justify-center">
+          <button
+            onClick={handleGoTop}
+            className="rounded bg-gray-200 px-4 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-300"
+            aria-label="Go to top"
+          >
+            ↑
+          </button>
+        </div>
       </div>
     </div>
   );
