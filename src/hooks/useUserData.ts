@@ -65,4 +65,4 @@ export const useUserData = (options: UseUserDataOptions = {}) => {
     refetch,
     reset,
   };
-}
+};

@@ -47,11 +47,11 @@ export const DepartmentCard: FC<Props> = ({ department, data }) => {
           <div
             className="bg-blue-500"
             style={{ width: `${malePercentage}%` }}
-          ></div>
+          />
           <div
             className="bg-pink-500"
             style={{ width: `${femalePercentage}%` }}
-          ></div>
+          />
         </div>
       </div>
 
