@@ -1,12 +1,12 @@
 import type { DepartmentData } from '@/types/user';
-import { useState } from 'react';
+import { FC, useState } from 'react';
 
-interface DepartmentCardProps {
+interface Props {
   department: string;
   data: DepartmentData;
 }
 
-export const DepartmentCard = ({ department, data }: DepartmentCardProps) => {
+export const DepartmentCard: FC<Props> = ({ department, data }) => {
   const [expanded, setExpanded] = useState(false);
 
   const totalUsers = data.male + data.female;
