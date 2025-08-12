@@ -1,28 +1,21 @@
 import { DepartmentCard } from '@/components/ui/DepartmentCard';
 import { Loading } from '@/components/ui/Loading';
+import { useDebounce } from '@/hooks/useDebounce';
 import { useUserData } from '@/hooks/useUserData';
 import { formatJSON } from '@/utils/json';
 import { getDataSummary } from '@/utils/userTransform';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 export default function ApiDemoPage() {
   const [limit, setLimit] = useState(50);
   const [skip, setSkip] = useState(0);
-  const [inputSkip, setInputSkip] = useState(0);
 
-  // Debounce skip changes
-  useEffect(() => {
-    const handler = setTimeout(() => {
-      setSkip(inputSkip);
-    }, 500); // 500ms debounce
-
-    return () => clearTimeout(handler);
-  }, [inputSkip]);
+  const debouncedSkip = useDebounce(skip, 500);
 
   const { data, loading, error, refetch } = useUserData({
     limit,
-    skip,
+    skip: debouncedSkip,
   });
 
   const summary = data ? getDataSummary(data) : null;
@@ -32,7 +25,7 @@ export default function ApiDemoPage() {
   };
 
   const handleSkipChange = (newSkip: number) => {
-    setInputSkip(newSkip);
+    setSkip(newSkip);
   };
 
   if (loading) {
@@ -110,7 +103,7 @@ export default function ApiDemoPage() {
               <label className="text-sm font-medium text-gray-700">Skip:</label>
               <input
                 type="number"
-                value={inputSkip}
+                value={skip}
                 onChange={(e) => handleSkipChange(Number(e.target.value))}
                 min="0"
                 className="w-20 rounded border border-gray-300 px-3 py-1 text-sm"
