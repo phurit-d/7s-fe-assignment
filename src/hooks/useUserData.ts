@@ -7,7 +7,7 @@ interface UseUserDataOptions {
   autoFetch?: boolean;
 }
 
-export function useUserData(options: UseUserDataOptions = {}) {
+export const useUserData = (options: UseUserDataOptions = {}) => {
   const { limit = 100, skip = 0, autoFetch = true } = options;
 
   const [data, setData] = useState<TransformedData | null>(null);
