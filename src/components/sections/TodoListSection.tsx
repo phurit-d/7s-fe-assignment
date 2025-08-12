@@ -84,7 +84,7 @@ export const TodoListSection = () => {
   };
 
   return (
-    <div>
+    <section>
       <div className="mb-8">
         <h2 className="mb-4 text-3xl font-bold text-gray-900">
           1. Auto Delete Todo List
@@ -176,6 +176,6 @@ export const TodoListSection = () => {
           </li>
         </ul>
       </div>
-    </div>
+    </section>
   );
 };

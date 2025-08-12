@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export const ApiDataSection = () => {
   return (
-    <div>
+    <section>
       <div className="mb-8">
         <h2 className="mb-4 text-3xl font-bold text-gray-900">
           2. API Data Transformation
@@ -111,34 +111,34 @@ export const ApiDataSection = () => {
       <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
         <div className="rounded-lg bg-white p-6 shadow-md">
           <h4 className="mb-3 font-bold text-gray-800">🎯 Performance</h4>
-          <ul className="space-y-2 text-sm text-gray-600">
-            <li>• Single-pass O(n) algorithm</li>
-            <li>• Map-based aggregation</li>
-            <li>• Memory efficient processing</li>
-            <li>• Response caching</li>
+          <ul className="list-disc space-y-2 pl-6 text-sm text-gray-600">
+            <li>Single-pass O(n) algorithm</li>
+            <li>Map-based aggregation</li>
+            <li>Memory efficient processing</li>
+            <li>Response caching</li>
           </ul>
         </div>
 
         <div className="rounded-lg bg-white p-6 shadow-md">
           <h4 className="mb-3 font-bold text-gray-800">🔧 TypeScript</h4>
-          <ul className="space-y-2 text-sm text-gray-600">
-            <li>• Strong type definitions</li>
-            <li>• Interface segregation</li>
-            <li>• Generic utility types</li>
-            <li>• Runtime type safety</li>
+          <ul className="list-disc space-y-2 pl-6 text-sm text-gray-600">
+            <li>Strong type definitions</li>
+            <li>Interface segregation</li>
+            <li>Generic utility types</li>
+            <li>Runtime type safety</li>
           </ul>
         </div>
 
         <div className="rounded-lg bg-white p-6 shadow-md">
           <h4 className="mb-3 font-bold text-gray-800">🧪 Testing</h4>
-          <ul className="space-y-2 text-sm text-gray-600">
-            <li>• Unit tests for transformations</li>
-            <li>• Edge case handling</li>
-            <li>• Performance benchmarks</li>
-            <li>• Mock data scenarios</li>
+          <ul className="list-disc space-y-2 pl-6 text-sm text-gray-600">
+            <li>Unit tests for transformations</li>
+            <li>Edge case handling</li>
+            <li>Performance benchmarks</li>
+            <li>Mock data scenarios</li>
           </ul>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
