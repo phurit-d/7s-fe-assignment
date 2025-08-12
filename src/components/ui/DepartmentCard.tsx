@@ -25,8 +25,7 @@ export const DepartmentCard: FC<Props> = ({ department, data }) => {
           <div>
             <h3 className="text-xl font-bold text-gray-800">{department}</h3>
             <p className="text-gray-600">
-              {totalUsers} users • Age range: {data.ageRange} •
-              {Object.keys(data.hair).length} hair colors
+              {`${totalUsers} users • Age range: ${data.ageRange} • ${Object.keys(data.hair).length} hair colors`}
             </p>
           </div>
           <div className="flex items-center gap-4">
