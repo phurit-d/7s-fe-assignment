@@ -3,9 +3,10 @@ import { Loading } from '@/components/ui/Loading';
 import { useUserData } from '@/hooks/useUserData';
 import { formatJSON } from '@/utils/json';
 import { getDataSummary } from '@/utils/userTransform';
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
-export default function UserDataPage() {
+export default function ApiDemoPage() {
   const [limit, setLimit] = useState(50);
   const [skip, setSkip] = useState(0);
   const [inputSkip, setInputSkip] = useState(0);
@@ -66,6 +67,15 @@ export default function UserDataPage() {
   return (
     <div className="min-h-screen bg-gray-50 p-6">
       <div className="mx-auto max-w-7xl">
+        <div className="mb-4">
+          <Link
+            href="/"
+            className="inline-block rounded bg-gray-200 px-4 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-300"
+          >
+            ← Back to Home
+          </Link>
+        </div>
+
         {/* Header */}
         <div className="mb-6 rounded-lg bg-white p-6 shadow-md">
           <h1 className="mb-4 text-3xl font-bold text-gray-800">
