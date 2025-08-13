@@ -84,7 +84,8 @@ export const ApiDataSection = () => {
         </h3>
         <p className="mb-4 text-gray-600">
           Experience the full API data transformation with real data from
-          DummyJSON API. The demo includes live data fetching and comprehensive UI.
+          DummyJSON API. The demo includes live data fetching and comprehensive
+          UI.
         </p>
         <Link
           href="/api-demo"
