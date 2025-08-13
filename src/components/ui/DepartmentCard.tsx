@@ -1,5 +1,6 @@
 import type { DepartmentData } from '@/types/user';
 import { FC, useState } from 'react';
+import { LuChevronDown, LuChevronUp } from 'react-icons/lu';
 
 interface Props {
   department: string;
@@ -37,7 +38,11 @@ export const DepartmentCard: FC<Props> = ({ department, data }) => {
               </div>
             </div>
             <div className="transform transition-transform">
-              {expanded ? '▼' : '▶'}
+              {expanded ? (
+                <LuChevronUp className="size-5" />
+              ) : (
+                <LuChevronDown className="size-5" />
+              )}
             </div>
           </div>
         </div>
