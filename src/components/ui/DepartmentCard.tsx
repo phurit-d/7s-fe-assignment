@@ -33,7 +33,7 @@ export const DepartmentCard: FC<Props> = ({ department, data }) => {
             <div className="text-right">
               <div className="text-sm text-gray-500">Gender Split</div>
               <div className="text-sm">
-                <span className="text-blue-600">♂ {data.male}</span> /
+                <span className="text-blue-600">♂ {data.male}</span> /{' '}
                 <span className="text-pink-600">♀ {data.female}</span>
               </div>
             </div>
