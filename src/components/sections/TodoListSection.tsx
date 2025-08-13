@@ -1,4 +1,4 @@
-import { ItemType, type TodoItem } from '@/types/todo';
+import { ItemType, type TodoItem } from '@/types';
 import { useRef, useState } from 'react';
 
 const initialList: TodoItem[] = [

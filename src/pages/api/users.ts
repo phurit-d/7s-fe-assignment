@@ -4,7 +4,7 @@ import type {
   HairColors,
   TransformedData,
   User,
-} from '@/types/user';
+} from '@/types';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 // Performance optimized data transformation

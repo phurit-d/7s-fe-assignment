@@ -1,4 +1,4 @@
-import { Footer } from '@/components/layout/Footer';
+import { Footer } from '@/components/layout';
 import { ApiDataSection, TodoListSection } from '@/components/sections';
 import { toClassNames } from '@/utils/styles';
 import { useState } from 'react';

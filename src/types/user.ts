@@ -43,10 +43,3 @@ export interface DepartmentData {
 export interface TransformedData {
   [department: string]: DepartmentData;
 }
-
-// API response types
-export interface ApiResponse<T> {
-  data?: T;
-  error?: string;
-  loading?: boolean;
-}

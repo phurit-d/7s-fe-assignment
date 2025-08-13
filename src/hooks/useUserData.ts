@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
-import type { TransformedData } from '../types/user';
+import type { TransformedData } from '@/types/user';
 
 interface UseUserDataOptions {
   limit?: number;

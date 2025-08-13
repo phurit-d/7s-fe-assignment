@@ -1,9 +1,6 @@
-import { DepartmentCard } from '@/components/ui/DepartmentCard';
-import { Loading } from '@/components/ui/Loading';
-import { useDebounce } from '@/hooks/useDebounce';
-import { useUserData } from '@/hooks/useUserData';
-import { formatJSON } from '@/utils/json';
-import { getDataSummary } from '@/utils/userTransform';
+import { DepartmentCard, Loading } from '@/components/ui';
+import { useDebounce, useUserData } from '@/hooks';
+import { formatJSON, getDataSummary } from '@/utils';
 import Link from 'next/link';
 import { useState } from 'react';
 
