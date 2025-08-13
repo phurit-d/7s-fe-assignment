@@ -3,6 +3,7 @@ import { useDebounce, useUserData } from '@/hooks';
 import { formatJSON, getDataSummary } from '@/utils';
 import Link from 'next/link';
 import { useState } from 'react';
+import { LuArrowLeft, LuChevronUp } from 'react-icons/lu';
 
 export default function ApiDemoPage() {
   const [limit, setLimit] = useState(50);
@@ -64,9 +65,9 @@ export default function ApiDemoPage() {
         <div className="mb-4">
           <Link
             href="/"
-            className="inline-block rounded bg-gray-200 px-4 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-300"
+            className="inline-flex items-center gap-1 rounded bg-gray-200 px-4 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-300"
           >
-            ← Back to Home
+            <LuArrowLeft /> Back to Home
           </Link>
         </div>
 
@@ -195,10 +196,10 @@ export default function ApiDemoPage() {
         <div className="mt-6 flex items-center justify-center">
           <button
             onClick={handleGoTop}
-            className="rounded bg-gray-200 px-4 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-300"
+            className="rounded bg-gray-200 p-3 text-gray-700 transition-colors hover:bg-gray-300"
             aria-label="Go to top"
           >
-            ↑
+            <LuChevronUp />
           </button>
         </div>
       </div>

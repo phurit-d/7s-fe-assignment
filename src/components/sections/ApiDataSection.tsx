@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { LuArrowRight } from 'react-icons/lu';
 
 export const ApiDataSection = () => {
   return (
@@ -88,22 +89,10 @@ export const ApiDataSection = () => {
         </p>
         <Link
           href="/api-demo"
-          className="inline-flex items-center rounded-lg bg-blue-600 px-6 py-3 font-medium text-white transition-colors hover:bg-blue-700"
+          className="inline-flex items-center gap-1 rounded-lg bg-blue-600 px-6 py-3 font-medium text-white transition-colors hover:bg-blue-700"
         >
           <span>Launch API Demo</span>
-          <svg
-            className="ml-2 h-4 w-4"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M13 7l5 5m0 0l-5 5m5-5H6"
-            />
-          </svg>
+          <LuArrowRight />
         </Link>
       </div>
 
